@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home/home.css' %}">
 </head>
 
 <body>
-    <h1>Welcome to Home Page</h1>
+    <div class="row">
+        <div class="grid-container">
+            <div class="grid-item"> </div>
+            <div class="grid-item">
+                <button id="inventory">Inventory</button>
+            </div>
+            <div class="grid-item">
+                <button id="billing">Billing</button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        {% block content %}{% endblock %}
+    </div>
 </body>
 
 </html>
