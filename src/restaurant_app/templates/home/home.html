@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Home Page</title>
@@ -8,29 +9,26 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="grid-container">
-            <div class="grid-item">
-                <button id="home">
-                    <a href="/">Home</a>
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="inventory" >
-                    <a href="/inventory/">Inventory</a>
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="billing">
-                    <a href="/billing/">Billing</a>
-                </button>
-            </div>
-        </div>
+
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">Log Out</a></p>
+
+    <div class="topnav">
+    <a href="/">Home</a>
+    <a href="inventory">Inventory</a>
+    <a href="billing">Billing</a>
     </div>
 
-    <div>
-        {% block content %}{% endblock %}
-    </div>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">Log In</a>
+{% endif %}
+
+<div>
+    {% block content %} {% endblock %}
+</div>
+
 </body>
 
 </html>

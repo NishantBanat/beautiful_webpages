@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="aa873067-adb2-4eb3-8682-5433a31702bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurant_app/billing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/billing/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurant_app/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/home/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurant_app/inventory/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/inventory/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurant_app/inventory/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/inventory/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/restaurant_app/restaurant_app/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/restaurant_app/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/restaurant_app/restaurant_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/restaurant_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/restaurant_app/static/css/home/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/static/css/home/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/restaurant_app/templates/home/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/templates/home/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurant_app/templates/home/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/templates/home/home_page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/restaurant_app/templates/inventory/inv_land.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/restaurant_app/templates/inventory/inv_land.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +76,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

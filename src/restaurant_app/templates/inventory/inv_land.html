@@ -1,4 +1,31 @@
 {% extends "home/home.html" %}
 {% block content %}
+{% load static %}
 <h1>Welcome to Inventory Section</h1>
+<div class="row">
+    <button onclick="inv_add_content()">Add</button>
+    <button>Update</button>
+    <button>Delete</button>
+</div>
+
+<br>
+
+<div id="add_content" style="display:none">
+    <form method="POST" action="inventory/inv_add/">
+        <div class="row">
+            <label>Product name : </label>
+            <input type="text" id="product_name" name="product_name">
+        </div>
+        <div class="row">
+            <label>Price : </label>
+            <input type="text" id="product_price" name="product_price">
+        </div>
+        <br>
+        <input type="submit" value="submit" id="inv_add_sub">
+    </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="{% static 'js/inventory/inventory.js' %}"></script>
+
 {% endblock %}
