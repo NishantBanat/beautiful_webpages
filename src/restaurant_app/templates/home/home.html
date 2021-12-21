@@ -21,8 +21,11 @@
     </div>
 
 {% else %}
-  <p>You are not logged in</p>
+  <p>Already have an account ? Please login :</p>
   <a href="{% url 'login' %}">Log In</a>
+  <br>
+  <p>If not having account, please sign-up here :</p>
+  <a href="{%url 'signup' %}">Sign up</a>
 {% endif %}
 
 <div>

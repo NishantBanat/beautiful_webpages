@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     'home.apps.HomeConfig',
     'inventory.apps.InventoryConfig',
     'billing.apps.BillingConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django_session_timeout.middleware.SessionTimeoutMiddleware',
     'django.middleware.common.CommonMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -59,7 +61,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, "templates")],
-        'APP_DIRS': False,
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -135,4 +137,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-SESSION_COOKIE_AGE = 60
+# SESSION_COOKIE_AGE = 60
+
+SESSION_EXPIRE_SECONDS = 60 * 60  # 1 minute
+
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY = True
+
+SESSION_EXPIRE_AFTER_LAST_ACTIVITY_GRACE_PERIOD = 20 # group by minute
+
+SESSION_TIMEOUT_REDIRECT = 'home'
